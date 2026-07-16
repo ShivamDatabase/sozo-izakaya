@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SOZO Izakaya 🍣
 
-## Getting Started
+A modern, responsive Japanese restaurant website built with **Next.js**, featuring an elegant UI, smooth animations, menu showcase, gallery, contact section, and mobile-first design.
 
-First, run the development server:
+## 🌐 Live Website
+
+**Website:** https://sozo-izakaya.vercel.app/
+
+---
+
+## ✨ Features
+
+- Modern Japanese-inspired UI
+- Fully responsive design
+- Fast page loading
+- Mobile-friendly layout
+- Hero section
+- About section
+- Food & Drinks Menu
+- Gallery
+- Contact section
+- Smooth scrolling navigation
+- Optimized images
+- SEO-friendly pages
+- Clean component architecture
+
+---
+
+## 🛠️ Built With
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion (if used)
+- Lucide React Icons
+- Vercel
+
+---
+
+## 📂 Project Structure
+
+```
+app/
+components/
+public/
+styles/
+lib/
+hooks/
+types/
+```
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository
+
+```bash
+git clone <your-repository-url>
+```
+
+Navigate to the project
+
+```bash
+cd sozo-izakaya
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📦 Production Build
 
-To learn more about Next.js, take a look at the following resources:
+Build the project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run the production server
 
-## Deploy on Vercel
+```bash
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📸 Preview
+
+Live Preview
+
+https://sozo-izakaya.vercel.app/
+
+---
+
+## 🌍 Deployment
+
+The application is deployed on **Vercel**.
+
+Live URL:
+
+https://sozo-izakaya.vercel.app/
+
+---
+
+## 📱 Responsive Design
+
+The website is optimized for
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile Devices
+
+---
+
+## ⚡ Performance
+
+- Optimized Images
+- Fast Loading
+- SEO Ready
+- Responsive Layout
+- Clean Code Structure
+
+---
+
+## 📄 License
+
+This project is developed for educational and portfolio purposes.
+
+---
+
+## 👨‍💻 Developer
+
+Designed and Developed using **Next.js** and **React**.
+
+Website:
+https://sozo-izakaya.vercel.app/
