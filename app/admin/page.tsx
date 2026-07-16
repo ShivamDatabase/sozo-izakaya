@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getLocations } from "@/app/actions/locations";
 import AdminLogoutBtn from "./AdminLogoutBtn";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminDashboard() {
   const locations = await getLocations();
 
