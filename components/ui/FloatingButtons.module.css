@@ -1,0 +1,80 @@
+.whatsapp {
+  position: fixed;
+  bottom: 100px;
+  right: 1.5rem;
+  z-index: 900;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+  transition: all var(--transition);
+}
+.whatsapp:hover {
+  transform: scale(1.12);
+  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.7);
+}
+.call {
+  position: fixed;
+  bottom: 162px;
+  right: 1.5rem;
+  z-index: 900;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(122, 30, 30, 0.5);
+  transition: all var(--transition);
+}
+.call:hover { transform: scale(1.12); }
+.backTop {
+  position: fixed;
+  bottom: 38px;
+  right: 1.5rem;
+  z-index: 900;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  color: var(--accent);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  opacity: 0;
+  pointer-events: none;
+}
+.backTop.visible { opacity: 1; pointer-events: auto; }
+.backTop:hover { background: var(--accent); color: var(--primary); border-color: var(--accent); }
+.mobileSticky {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 890;
+  background: var(--accent);
+  color: var(--primary);
+  text-align: center;
+  padding: 1rem;
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 900px) {
+  .mobileSticky { display: block; }
+}

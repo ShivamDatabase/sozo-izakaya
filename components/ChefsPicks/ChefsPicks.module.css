@@ -1,0 +1,106 @@
+.section {
+  padding: 7rem 0;
+  background: var(--secondary);
+  position: relative;
+  overflow: hidden;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/dining_ambience.jpg") center/cover no-repeat;
+  opacity: 0.12;
+}
+.inner { position: relative; z-index: 2; }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.tag {
+  display: inline-block;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.tag::before, .tag::after { content: "—"; margin: 0 0.6rem; opacity: 0.5; }
+.title {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1.2;
+}
+.title em { font-style: italic; color: var(--accent); }
+.divider {
+  width: 60px; height: 1px;
+  background: var(--accent);
+  margin: 1.5rem 0;
+  position: relative;
+}
+.divider::before, .divider::after {
+  content: "";
+  position: absolute; top: 50%;
+  transform: translateY(-50%);
+  width: 4px; height: 4px;
+  background: var(--accent); border-radius: 50%;
+}
+.divider::before { left: -8px; }
+.divider::after  { right: -8px; }
+.quote {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--text-light);
+  border-left: 2px solid var(--accent);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+.profile { display: flex; gap: 1rem; align-items: center; margin-top: 2rem; }
+.avatar {
+  width: 64px; height: 64px;
+  border-radius: 50%; overflow: hidden;
+  border: 2px solid var(--accent);
+  position: relative; flex-shrink: 0;
+}
+.chefName {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.1rem; color: var(--text-white);
+  margin-bottom: 0.25rem;
+}
+.chefRole {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.72rem; color: var(--accent);
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.cards { display: flex; flex-direction: column; gap: 1.5rem; }
+.card {
+  display: flex; gap: 1.2rem;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 4px;
+  padding: 1.2rem;
+  transition: all var(--transition);
+}
+.card:hover { border-color: var(--accent); transform: translateX(6px); }
+.pickImg {
+  width: 80px; height: 80px;
+  border-radius: 4px; overflow: hidden;
+  min-width: 80px; position: relative;
+}
+.pickInfo h4 {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.05rem; color: var(--text-white);
+  margin-bottom: 0.3rem;
+}
+.pickInfo p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+.price { color: var(--accent); font-weight: 600; margin-top: 0.4rem; display: block; }
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 3rem; }
+}

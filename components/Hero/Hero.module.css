@@ -1,0 +1,153 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.bg {
+  position: absolute;
+  inset: 0;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(10, 10, 10, 0.88) 0%,
+    rgba(10, 10, 10, 0.7) 40%,
+    rgba(122, 30, 30, 0.3) 100%
+  );
+  z-index: 1;
+}
+.particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+.particle {
+  position: absolute;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 0;
+  animation: floatParticle linear infinite;
+}
+.content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 0 1.5rem;
+  max-width: 900px;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid var(--border-gold);
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
+  margin-bottom: 2rem;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  backdrop-filter: blur(10px);
+  background: rgba(212, 175, 55, 0.05);
+  animation: fadeInDown 1s ease both;
+}
+.badge::before, .badge::after { content: "✦"; font-size: 0.6rem; }
+.title {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s 0.3s ease both;
+}
+.gold { color: var(--accent); font-style: italic; }
+.sub {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  animation: fadeInUp 1s 0.5s ease both;
+}
+.buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s 0.7s ease both;
+}
+.btnPrimary {
+  background: var(--accent);
+  color: var(--primary);
+  padding: 1rem 2.5rem;
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all var(--transition);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+}
+.btnPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.6);
+  background: var(--accent-light);
+}
+.btnOutline {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--text-white);
+  padding: 1rem 2.5rem;
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all var(--transition);
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.05);
+}
+.btnOutline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(212, 175, 55, 0.08);
+  transform: translateY(-3px);
+}
+.scrollHint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 3;
+  animation: fadeIn 2s 1.2s ease both;
+}
+.scrollHint span {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.scrollLine {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: scrollPulse 2s ease infinite;
+}

@@ -1,0 +1,50 @@
+.section {
+  position: relative;
+  padding: 8rem 0;
+  background: url('/images/dining_ambience.jpg') center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.95), rgba(122,30,30,0.7));
+}
+.title {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 1rem;
+}
+.gold {
+  color: var(--accent);
+  font-style: italic;
+}
+.subtitle {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+.btn {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background: var(--accent);
+  color: var(--primary);
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+.btn:hover {
+  background: var(--accent-light);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}

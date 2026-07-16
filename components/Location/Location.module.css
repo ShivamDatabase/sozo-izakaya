@@ -1,0 +1,50 @@
+.section { padding: 7rem 0; background: var(--bg-dark); }
+.gold { color: var(--accent); font-style: italic; }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem; align-items: start;
+}
+.contactCard { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+.icon {
+  width: 50px; height: 50px; min-width: 50px; border-radius: 50%;
+  background: rgba(212,175,55,0.1); border: 1px solid var(--border-gold);
+  display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+}
+.cardTitle {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 0.3rem;
+}
+.cardBody { font-size: 0.92rem; color: var(--text-white); line-height: 1.7; }
+.cardLink { font-size: 0.92rem; color: var(--text-white); transition: color var(--transition-fast); }
+.cardLink:hover { color: var(--accent); }
+.hoursHead {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--accent); margin: 1.5rem 0 0.8rem;
+}
+.hours { width: 100%; }
+.hoursRow { border-bottom: 1px solid rgba(255,255,255,0.06); }
+.hoursRow td { padding: 0.7rem 0; font-size: 0.85rem; }
+.hoursDay { color: var(--text-muted); }
+.hoursTime { color: var(--accent); font-weight: 500; }
+.dirBtn {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  margin-top: 1.5rem;
+  background: var(--accent); color: var(--primary);
+  padding: 0.8rem 1.8rem; border-radius: 2px;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  transition: all var(--transition);
+}
+.dirBtn:hover { background: var(--accent-light); transform: translateY(-2px); }
+.map {
+  border-radius: 4px; overflow: hidden;
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-gold);
+}
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; gap: 3rem; } }

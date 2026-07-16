@@ -1,0 +1,23 @@
+.section { padding: 7rem 0; background: var(--bg-dark); }
+.gold { color: var(--accent); font-style: italic; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.card {
+  display: flex; gap: 1.5rem;
+  background: var(--bg-card);
+  border-radius: 4px; padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all var(--transition);
+}
+.card:hover { border-color: var(--border-gold); transform: translateY(-4px); }
+.date {
+  text-align: center; min-width: 64px;
+  background: var(--secondary); border-radius: 4px;
+  padding: 0.8rem 0.5rem;
+  display: flex; flex-direction: column; align-items: center;
+}
+.day { font-family: var(--font-playfair), serif; font-size: 2rem; font-weight: 700; color: #fff; line-height: 1; }
+.month { font-family: var(--font-poppins), sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+.title { font-family: var(--font-playfair), serif; font-size: 1.1rem; color: var(--text-white); margin-bottom: 0.5rem; }
+.desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+.time { color: var(--accent); font-size: 0.78rem; font-weight: 500; margin-top: 0.5rem; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }

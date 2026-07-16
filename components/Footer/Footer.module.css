@@ -1,0 +1,89 @@
+.newsletter { background: var(--secondary); padding: 4rem 0; text-align: center; }
+.nlTitle { font-family: var(--font-playfair), serif; font-size: 2rem; color: var(--text-white); margin-bottom: 0.5rem; }
+.nlSub { font-family: var(--font-cormorant), serif; font-size: 1.1rem; color: rgba(255,255,255,0.75); margin-bottom: 2rem; }
+.nlForm {
+  display: flex; max-width: 480px; margin: 0 auto;
+  border-radius: 2px; overflow: hidden;
+  border: 1px solid rgba(212,175,55,0.4);
+}
+.nlInput {
+  flex: 1; padding: 0.9rem 1.2rem;
+  background: rgba(0,0,0,0.3); color: var(--text-white); font-size: 0.88rem;
+  border: none;
+}
+.nlInput::placeholder { color: rgba(255,255,255,0.4); }
+.nlBtn {
+  padding: 0.9rem 1.5rem; background: var(--accent); color: var(--primary);
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600; font-size: 0.8rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  transition: all var(--transition); cursor: pointer; border: none;
+}
+.nlBtn:hover { background: var(--accent-light); }
+.nlSubbed { background: #2d7a3a !important; }
+/* Instagram */
+.instagram { background: var(--primary); padding: 5rem 0; }
+.instaHeader { text-align: center; margin-bottom: 2rem; }
+.tag {
+  display: inline-block; font-family: var(--font-poppins), sans-serif;
+  font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 0.5rem;
+}
+.instaHandle { font-family: var(--font-playfair), serif; font-size: 2rem; color: var(--text-white); }
+.instaGrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.5rem; }
+.instaItem { aspect-ratio: 1; overflow: hidden; position: relative; cursor: pointer; }
+.instaImg { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; display: block; }
+.instaItem:hover .instaImg { transform: scale(1.1); }
+.instaOverlay {
+  position: absolute; inset: 0;
+  background: rgba(212,175,55,0.7);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity var(--transition);
+  font-size: 1.2rem;
+}
+.instaItem:hover .instaOverlay { opacity: 1; }
+/* Footer */
+.footer { background: #080808; padding: 5rem 0 2rem; border-top: 1px solid rgba(212,175,55,0.1); }
+.grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 4rem; }
+.logoMain { font-family: var(--font-playfair), serif; font-size: 2rem; color: var(--accent); letter-spacing: 0.08em; }
+.logoSub { font-family: var(--font-cormorant), serif; font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.3em; text-transform: uppercase; margin-top: 2px; }
+.brandDesc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; margin: 1.2rem 0; max-width: 280px; }
+.socials { display: flex; gap: 0.8rem; }
+.socialIcon {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; transition: all var(--transition); color: var(--text-muted);
+}
+.socialIcon:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
+.colHead {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 1.5rem;
+}
+.col ul li { margin-bottom: 0.75rem; }
+.colLink {
+  font-size: 0.85rem; color: var(--text-muted);
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+.colLink:hover { color: var(--text-white); padding-left: 6px; }
+.hours p { font-size: 0.83rem; color: var(--text-muted); line-height: 2; }
+.hours span { color: var(--accent); font-weight: 500; }
+.tel { color: var(--text-muted); }
+.tel:hover { color: var(--accent); }
+.bottom {
+  border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem;
+}
+.bottom p { font-size: 0.78rem; color: var(--text-muted); }
+.bottomLink { color: var(--accent); }
+@media (max-width: 1100px) { .grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+  .instaGrid { grid-template-columns: repeat(3, 1fr); }
+  .nlForm { flex-direction: column; border: none; gap: 0.7rem; }
+  .nlInput, .nlBtn { border: 1px solid rgba(212,175,55,0.4); border-radius: 2px; }
+}
