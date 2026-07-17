@@ -62,12 +62,17 @@ export default function Cursor() {
       { threshold: 0.1, rootMargin: "0px 0px -60px 0px" }
     );
 
-    const targets = document.querySelectorAll(
-      ".reveal, .reveal-left, .reveal-right, .reveal-scale"
-    );
-    targets.forEach((el) => observer.observe(el));
+    const timer = setTimeout(() => {
+      const targets = document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right, .reveal-scale"
+      );
+      targets.forEach((el) => observer.observe(el));
+    }, 100);
 
-    return () => observer.disconnect();
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
   }, [pathname]);
 
   if (pathname?.startsWith("/admin")) return null;

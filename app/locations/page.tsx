@@ -10,7 +10,6 @@ import { getLocations } from "@/app/actions/locations";
 import { ZONES, type Zone, type Location } from "@/lib/locations";
 import styles from "./page.module.css";
 
-export const dynamic = "force-dynamic";
 
 interface NearestResult {
   id: string;

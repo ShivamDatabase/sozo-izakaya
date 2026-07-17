@@ -1,6 +1,3 @@
-"use client";
-import { useEffect } from "react";
-
 // UI Utilities
 import Loader        from "@/components/ui/Loader";
 import ScrollProgress from "@/components/ui/ScrollProgress";

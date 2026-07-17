@@ -36,11 +36,11 @@ export default function Navbar() {
         <ul className={styles.links}>
           {navLinks.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className={styles.link}>{l.label}</a>
+              <Link href={l.href} className={styles.link}>{l.label}</Link>
             </li>
           ))}
           <li>
-            <a href="/locations" className={`${styles.link} ${styles.cta}`}>Reserve Table</a>
+            <Link href="/locations" className={`${styles.link} ${styles.cta}`}>Reserve Table</Link>
           </li>
         </ul>
 
@@ -56,13 +56,13 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <div className={`${styles.drawer} ${menuOpen ? styles.drawerOpen : ""}`}>
         {navLinks.map((l) => (
-          <a key={l.href} href={l.href} className={styles.drawerLink} onClick={close}>
+          <Link key={l.href} href={l.href} className={styles.drawerLink} onClick={close}>
             {l.label}
-          </a>
+          </Link>
         ))}
-        <a href="#reservation" className={`${styles.drawerLink} ${styles.drawerCta}`} onClick={close}>
+        <Link href="/locations" className={`${styles.drawerLink} ${styles.drawerCta}`} onClick={close}>
           Reserve Table
-        </a>
+        </Link>
       </div>
     </>
   );
