@@ -49,6 +49,27 @@ export default function Cursor() {
     };
   }, [pathname]);
 
+  // Global scroll-reveal observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -60px 0px" }
+    );
+
+    const targets = document.querySelectorAll(
+      ".reveal, .reveal-left, .reveal-right, .reveal-scale"
+    );
+    targets.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [pathname]);
+
   if (pathname?.startsWith("/admin")) return null;
 
   return (

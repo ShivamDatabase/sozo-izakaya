@@ -37,7 +37,7 @@ export default function FloatingButtons() {
       >
         ↑
       </button>
-      <a href="#reservation" className={styles.mobileSticky}>
+      <a href="/locations" className={styles.mobileSticky}>
         Reserve a Table →
       </a>
     </>
