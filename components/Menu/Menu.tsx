@@ -2,19 +2,18 @@
 import { useState } from "react";
 import Image from "next/image";
 import SectionHeader from "@/components/ui/SectionHeader";
-import { menuItems } from "@/lib/data";
 import type { MenuItem } from "@/lib/data";
 import styles from "./Menu.module.css";
 
 const FILTERS = ["all", "small plates", "sushi", "desserts", "coffee", "bottles & cans"] as const;
 type Filter = typeof FILTERS[number];
 
-export default function Menu() {
+export default function Menu({ initialItems }: { initialItems: MenuItem[] }) {
   const [active, setActive] = useState<Filter>("all");
 
   const filtered = active === "all"
-    ? menuItems
-    : menuItems.filter((m) => m.category === active);
+    ? initialItems
+    : initialItems.filter((m) => m.category === active);
 
   return (
     <section id="menu" className={styles.section}>
@@ -74,7 +73,7 @@ function DishCard({ item, delay }: { item: MenuItem; delay: number }) {
         />
         {item.badge && <span className={styles.badge}>{item.badge}</span>}
         <div className={styles.overlay}>
-          <a href="#reservation" className={styles.overlayBtn}>Reserve &amp; Order</a>
+          <a href="/locations" className={styles.overlayBtn}>Reserve &amp; Order</a>
         </div>
       </div>
       <div className={styles.info}>

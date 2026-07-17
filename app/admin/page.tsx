@@ -25,9 +25,30 @@ export default async function AdminDashboard() {
       <main style={{ padding: "3rem 2rem", maxWidth: "1200px", margin: "0 auto" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem" }}>
           <div>
-            <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "2rem", margin: 0 }}>Manage Locations</h2>
-            <p style={{ color: "var(--text-muted)", margin: "0.5rem 0 0 0" }}>{locations.length} Active Outlets</p>
+            <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "2rem", margin: 0 }}>Dashboard</h2>
+            <p style={{ color: "var(--text-muted)", margin: "0.5rem 0 0 0" }}>Welcome to the Sozo Admin Panel.</p>
           </div>
+        </div>
+
+        <div style={{ display: "flex", gap: "1rem", marginBottom: "3rem", flexWrap: "wrap" }}>
+          <Link href="/admin/menu" style={{
+            background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)",
+            padding: "1.5rem 2rem", borderRadius: "4px", flex: "1", minWidth: "200px"
+          }}>
+            <h3 style={{ margin: "0 0 0.5rem 0", color: "var(--accent)" }}>Menu Control</h3>
+            <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--text-muted)" }}>Edit item prices and details.</p>
+          </Link>
+          <Link href="/admin/offers" style={{
+            background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)",
+            padding: "1.5rem 2rem", borderRadius: "4px", flex: "1", minWidth: "200px"
+          }}>
+            <h3 style={{ margin: "0 0 0.5rem 0", color: "var(--accent)" }}>Offer Control</h3>
+            <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--text-muted)" }}>Enable/disable the homepage banner.</p>
+          </Link>
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
+          <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "1.5rem", margin: 0 }}>Manage Locations</h2>
           <Link href="/admin/add" style={{
             background: "var(--accent)", color: "var(--primary)", padding: "0.7rem 1.5rem",
             fontFamily: "var(--font-poppins)", fontSize: "0.85rem", fontWeight: 600,
