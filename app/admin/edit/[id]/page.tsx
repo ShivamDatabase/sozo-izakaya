@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getLocationBySlug } from "@/app/actions/locations";
 import prisma from "@/lib/prisma";
 import LocationForm from "../../LocationForm";
 

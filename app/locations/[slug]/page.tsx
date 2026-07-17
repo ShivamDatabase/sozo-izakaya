@@ -6,7 +6,7 @@ import LocationDetail from "./LocationDetail";
 // Generate static params for all locations
 export async function generateStaticParams() {
   const locations = await getLocations();
-  return locations.map((loc: any) => ({ slug: loc.slug }));
+  return locations.map((loc) => ({ slug: loc.slug }));
 }
 
 // Dynamic metadata per outlet

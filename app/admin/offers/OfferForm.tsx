@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { updateOffer } from "@/app/actions/offers";
 import { useRouter } from "next/navigation";
+import { Offer } from "@prisma/client";
 
-export default function OfferForm({ offer }: { offer: any }) {
+export default function OfferForm({ offer }: { offer: Offer | null }) {
   const [text, setText] = useState(offer?.text || "Grand Opening Special — Book a table for 4 or more and enjoy a complimentary Sake Set");
   const [isActive, setIsActive] = useState(offer?.isActive || false);
   const [loading, setLoading] = useState(false);

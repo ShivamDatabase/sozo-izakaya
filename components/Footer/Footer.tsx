@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -44,7 +45,7 @@ export default function Footer() {
             {["/images/sushi_platter.jpg","/images/ramen_bowl.jpg","/images/yakitori.jpg",
               "/images/dining_ambience.jpg","/images/sake.jpg","/images/mochi.jpg"].map((src, i) => (
               <div key={i} className={styles.instaItem}>
-                <img src={src} alt="Instagram" loading="lazy" className={styles.instaImg} />
+                <Image src={src} alt="Instagram" fill style={{ objectFit: "cover" }} className={styles.instaImg} />
                 <div className={styles.instaOverlay}>📸</div>
               </div>
             ))}

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import SectionHeader from "@/components/ui/SectionHeader";
 import styles from "./About.module.css";
 
 export default function About() {

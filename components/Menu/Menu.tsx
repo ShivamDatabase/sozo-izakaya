@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import SectionHeader from "@/components/ui/SectionHeader";
 import type { MenuItem } from "@/lib/data";
 import styles from "./Menu.module.css";
@@ -47,7 +48,7 @@ export default function Menu({ initialItems }: { initialItems: MenuItem[] }) {
         {/* The Spirit of SOZO Section */}
         <div style={{ marginTop: "4rem", textAlign: "center" }} className="reveal">
           <p style={{ fontFamily: "var(--font-heading)", color: "var(--accent)", fontSize: "1.5rem", fontStyle: "italic", maxWidth: "800px", margin: "0 auto" }}>
-            "Dining at Sozo is described as an experience blending innovation, comfort, and tradition, emphasizing quality, care, and passion in every dish."
+            &ldquo;Dining at Sozo is described as an experience blending innovation, comfort, and tradition, emphasizing quality, care, and passion in every dish.&rdquo;
           </p>
         </div>
       </div>
@@ -73,7 +74,7 @@ function DishCard({ item, delay }: { item: MenuItem; delay: number }) {
         />
         {item.badge && <span className={styles.badge}>{item.badge}</span>}
         <div className={styles.overlay}>
-          <a href="/locations" className={styles.overlayBtn}>Reserve &amp; Order</a>
+          <Link href="/locations" className={styles.overlayBtn}>Reserve &amp; Order</Link>
         </div>
       </div>
       <div className={styles.info}>

@@ -216,7 +216,7 @@ export default function LocationsPage() {
           {/* All Mumbai Map */}
           <div className={`${styles.allMapSection} reveal`}>
             <h2 className={styles.allMapTitle}>All <em className={styles.gold}>Mumbai Locations</em></h2>
-            <p className={styles.allMapDesc}>Sozo Izakaya is spread across Mumbai's key neighbourhoods</p>
+            <p className={styles.allMapDesc}>Sozo Izakaya is spread across Mumbai&apos;s key neighbourhoods</p>
             <div className={styles.mapGrid}>
               {locations.map((loc) => (
                 <div key={loc.id} className={styles.miniMapCard}>

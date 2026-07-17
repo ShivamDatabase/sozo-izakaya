@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { updateMenuItem } from "@/app/actions/menu";
 import { useRouter } from "next/navigation";
+import { MenuItem } from "@prisma/client";
 
-export default function MenuForm({ initialData }: { initialData: any }) {
+export default function MenuForm({ initialData }: { initialData: MenuItem }) {
   const [formData, setFormData] = useState(initialData);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -88,7 +89,7 @@ export default function MenuForm({ initialData }: { initialData: any }) {
       </div>
       
       <div>
-        <label style={{ display: "block", marginBottom: "0.5rem", color: "var(--text-light)" }}>Badge (Optional, e.g. "Spicy")</label>
+        <label style={{ display: "block", marginBottom: "0.5rem", color: "var(--text-light)" }}>Badge (Optional, e.g. &quot;Spicy&quot;)</label>
         <input
           name="badge"
           value={formData.badge || ""}

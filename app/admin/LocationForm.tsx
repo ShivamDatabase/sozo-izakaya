@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createLocation, updateLocation, deleteLocation } from "@/app/actions/locations";
+import { Location } from "@/lib/locations";
 
 type LocationFormProps = {
-  initialData?: any;
+  initialData?: Location;
 };
 
 export default function LocationForm({ initialData }: LocationFormProps) {
@@ -31,7 +32,7 @@ export default function LocationForm({ initialData }: LocationFormProps) {
 
   // Simplified array fields using comma separated text for quick demo
   const [hoursText, setHoursText] = useState(
-    initialData ? initialData.hours.map((h: any) => `${h.days}|${h.time}`).join("\n") : "Monday – Friday|12:00 PM – 11:00 PM\nSaturday – Sunday|11:00 AM – 11:30 PM"
+    initialData ? initialData.hours.map((h) => `${h.days}|${h.time}`).join("\n") : "Monday – Friday|12:00 PM – 11:00 PM\nSaturday – Sunday|11:00 AM – 11:30 PM"
   );
   const [specialtiesText, setSpecialtiesText] = useState(initialData?.specialties?.join(", ") || "");
   const [featuresText, setFeaturesText] = useState(initialData?.features?.join(", ") || "");
@@ -59,7 +60,7 @@ export default function LocationForm({ initialData }: LocationFormProps) {
       galleryImages: galleryText.split("\n").map((g: string) => g.trim()).filter(Boolean),
     };
 
-    const res = isEdit
+    const res = isEdit && initialData
       ? await updateLocation(initialData.id, payload)
       : await createLocation(payload);
 
@@ -72,6 +73,7 @@ export default function LocationForm({ initialData }: LocationFormProps) {
   };
 
   const handleDelete = async () => {
+    if (!initialData) return;
     if (!confirm("Are you sure you want to delete this location?")) return;
     setLoading(true);
     const res = await deleteLocation(initialData.id);

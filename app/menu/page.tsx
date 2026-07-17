@@ -16,7 +16,7 @@ export default async function MenuPage() {
       <FloatingButtons />
       <Navbar />
       <main style={{ paddingTop: "80px", background: "var(--bg-dark)", minHeight: "100vh" }}>
-        <Menu initialItems={items as any} />
+        <Menu initialItems={items} />
       </main>
       <Footer />
     </>

@@ -8,8 +8,8 @@ export interface MenuItem {
   description: string;
   price: string;
   image: string;
-  category: "desserts" | "coffee" | "bottles & cans" | "small plates" | "sushi";
-  badge?: string;
+  category: string;
+  badge?: string | null;
 }
 
 export interface Review {

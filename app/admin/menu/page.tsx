@@ -1,6 +1,7 @@
 import Link from "next/link";
 import AdminLogoutBtn from "../AdminLogoutBtn";
 import prisma from "@/lib/prisma";
+import { MenuItem } from "@prisma/client";
 
 export const dynamic = "force-dynamic";
 
@@ -44,7 +45,7 @@ export default async function AdminMenuDashboard() {
               </tr>
             </thead>
             <tbody>
-              {items.map((item: any) => (
+              {items.map((item: MenuItem) => (
                 <tr key={item.id} style={{ borderBottom: "1px solid rgba(255,255,255,0.02)" }}>
                   <td style={{ padding: "1rem 1.5rem", fontWeight: 500 }}>{item.name}</td>
                   <td style={{ padding: "1rem 1.5rem", color: "var(--text-light)", textTransform: "capitalize" }}>{item.category}</td>

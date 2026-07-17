@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import styles from "./FloatingButtons.module.css";
 
 export default function FloatingButtons() {
@@ -37,9 +38,9 @@ export default function FloatingButtons() {
       >
         ↑
       </button>
-      <a href="/locations" className={styles.mobileSticky}>
+      <Link href="/locations" className={styles.mobileSticky}>
         Reserve a Table →
-      </a>
+      </Link>
     </>
   );
 }

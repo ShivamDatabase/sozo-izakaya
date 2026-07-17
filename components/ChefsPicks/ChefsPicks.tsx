@@ -1,5 +1,4 @@
 import Image from "next/image";
-import SectionHeader from "@/components/ui/SectionHeader";
 import { chefPicks } from "@/lib/data";
 import styles from "./ChefsPicks.module.css";
 

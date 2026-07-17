@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getLocations } from "@/app/actions/locations";
 import AdminLogoutBtn from "./AdminLogoutBtn";
+import { Location } from "@/lib/locations";
 
 export const dynamic = "force-dynamic";
 
@@ -72,7 +73,7 @@ export default async function AdminDashboard() {
               </tr>
             </thead>
             <tbody>
-              {locations.map((loc: any) => (
+              {locations.map((loc: Location) => (
                 <tr key={loc.id} style={{ borderBottom: "1px solid rgba(255,255,255,0.02)" }}>
                   <td style={{ padding: "1rem 1.5rem", fontWeight: 500 }}>{loc.name}</td>
                   <td style={{ padding: "1rem 1.5rem", color: "var(--text-light)" }}>{loc.area}</td>

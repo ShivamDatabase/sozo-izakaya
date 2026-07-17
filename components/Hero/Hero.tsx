@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -51,8 +52,8 @@ export default function Hero() {
           Visit us in Versova, Malad, Chembur, or Borivali for an unforgettable dining experience.
         </p>
         <div className={styles.buttons}>
-          <a href="/locations" className={styles.btnPrimary}>Find a Location</a>
-          <a href="/menu" className={styles.btnOutline}>View Menu</a>
+          <Link href="/locations" className={styles.btnPrimary}>Find a Location</Link>
+          <Link href="/menu" className={styles.btnOutline}>View Menu</Link>
         </div>
       </div>
 
